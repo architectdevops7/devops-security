@@ -118,7 +118,8 @@ sudo systemctl enable sonar
 
 check the sonar using URL http://ip_address:9000
 
-
+### Help Guide
+https://docs.sonarsource.com/sonarqube/latest/analyzing-source-code/scanners/sonarscanner-for-maven/
 
 
 
