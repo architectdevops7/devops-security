@@ -1,0 +1,61 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.learn</groupId>                 <!-- Group ID: A unique identifier for your project's group or organization -->
+    <artifactId>mycart</artifactId>              <!-- Artifact ID: A unique identifier for your project -->
+    <packaging>war</packaging>                   <!-- Packaging: Specifies the type of package (e.g., war, jar) -->
+    <version>0.0.1-SNAPSHOT</version>            <!-- Version: The version of your project -->
+    <name>mycart Maven Webapp</name>             <!-- Name: A descriptive name for your project -->
+    <url>http://maven.apache.org</url>           <!-- URL: The project's URL (optional) -->
+
+    <dependencies>
+        <!-- Dependencies: Define the libraries and dependencies your project needs -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.1</version>
+            <scope>test</scope>                    <!-- Scope: Indicates when this dependency is needed (test scope means only during testing) -->
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.4.2.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+            <scope>provided</scope>                <!-- Servlet API is provided by the server, so it's in 'provided' scope -->
+        </dependency>
+
+        <!-- Add other dependencies here -->
+
+        <!-- Example dependency: MySQL Connector/J -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.26</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <!-- Build Configuration: Specifies how your project should be built -->
+        <plugins>
+            <plugin>
+                <!-- Maven Compiler Plugin: Configures the Java compiler settings -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <!-- Source and Target: Specifies the Java version compatibility -->
+                    <source>11</source>
+                    <target>11</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
