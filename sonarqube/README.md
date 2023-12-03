@@ -21,14 +21,44 @@ rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql
 
 ### Use a Different Mirror:
 ```
-sudo vi /etc/yum.repos.d/mysql-community.repo
+sudo vi /etc/yum.repos.d/mysql-community-source.repo
 ```
 ```
-# Comment out or remove the mirrorlist line
-# mirrorlist=http://repo.mysql.com/yum/mysql-8.0-community/el/7/$basearch/
+[mysql-connectors-community-source]
+name=MySQL Connectors Community - Source
+baseurl=http://repo.mysql.com/yum/mysql-connectors-community/el/7/SRPMS
+enabled=0
+gpgcheck=1
+gpgkey=file:/etc/pki/rpm-gpg/RPM-GPG-KEY-mysql
 
-# Use a specific mirror URL
-baseurl=http://repo.mysql.com/yum/mysql-8.0-community/el/7/$basearch/
+[mysql-tools-community-source]
+name=MySQL Tools Community - Source
+baseurl=http://repo.mysql.com/yum/mysql-tools-community/el/7/SRPMS
+enabled=0
+gpgcheck=1
+gpgkey=file:/etc/pki/rpm-gpg/RPM-GPG-KEY-mysql
+
+[mysql55-community-source]
+name=MySQL 5.5 Community Server - Source
+baseurl=http://repo.mysql.com/yum/mysql-5.5-community/el/7/SRPMS
+enabled=0
+gpgcheck=1
+gpgkey=file:/etc/pki/rpm-gpg/RPM-GPG-KEY-mysql
+
+[mysql56-community]
+name=MySQL 5.6 Community Server
+baseurl=http://repo.mysql.com/yum/mysql-5.6-community/el/7/$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mysql
+
+
+[mysql57-community-dmr-source]
+name=MySQL 5.7 Community Server Development Milestone Release - Source
+baseurl=http://repo.mysql.com/yum/mysql-5.7-community/el/7/SRPMS
+enabled=0
+gpgcheck=1
+gpgkey=file:/etc/pki/rpm-gpg/RPM-GPG-KEY-mysql
 ```
 ```
 yum update
