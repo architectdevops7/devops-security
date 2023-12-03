@@ -71,7 +71,7 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <sonar.host.url>http://65.0.173.194:9000/</sonar.host.url>
+                <sonar.host.url>http://52.66.201.120:9000/</sonar.host.url>
             </properties>
         </profile>
     </profiles>
