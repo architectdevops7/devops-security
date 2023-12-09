@@ -12,12 +12,6 @@
 
     <dependencies>
         <!-- Dependencies: Define the libraries and dependencies your project needs -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.1</version>
-            <scope>test</scope>
-        </dependency>
 
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -30,6 +24,17 @@
             <artifactId>javax.servlet-api</artifactId>
             <version>4.0.1</version>
             <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.141.59</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
         </dependency>
 
         <!-- Add other dependencies here -->
